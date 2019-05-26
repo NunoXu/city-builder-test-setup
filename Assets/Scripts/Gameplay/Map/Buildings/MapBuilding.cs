@@ -7,7 +7,9 @@ namespace Assets.Scripts.Gameplay.Map.Buildings
     {
         Residence,
         WoodProduction,
-        SteelProduction
+        SteelProduction,
+        Tree,
+        Bench
     }
 
     public enum BuildState

@@ -25,7 +25,7 @@ namespace Assets.Scripts.Gameplay.Map.Buildings
             if (Input.GetButtonDown("Cancel"))
             {
                 LevelManager.Instance.Buildings.ClearPlacement();
-                Destroy(gameObject);
+                LevelManager.Instance.Buildings.DespawnMapBuilding(Building);
             }
         }
 

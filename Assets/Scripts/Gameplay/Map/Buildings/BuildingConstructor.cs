@@ -17,6 +17,7 @@ namespace Assets.Scripts.Gameplay.Map.Buildings
         {
             PayResourceCost();
             Building.State = BuildState.Constructing;
+            Building.Drag.Active = true;
             StartCoroutine(ConstructionRoutine());
         }
 

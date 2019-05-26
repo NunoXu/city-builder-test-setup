@@ -48,6 +48,12 @@ namespace Assets.Scripts.Gameplay.Map.Buildings
             return false;
         }
 
+        public void DespawnMapBuilding(MapBuilding buildingInstance)
+        {
+            Destroy(buildingInstance.gameObject);
+            _spawnedMapBuildingList.Remove(buildingInstance);
+        }
+
         public MapBuilding SpawnMapBuilding(BuildingType type)
         {
             MapBuilding buildingInstance = null;
@@ -60,6 +66,7 @@ namespace Assets.Scripts.Gameplay.Map.Buildings
                         buildingInstance = Instantiate(buildingPrefab, BuildingContainer, false);
                         buildingInstance.Map = Map;
                         _currentPlacement = buildingInstance;
+                        _spawnedMapBuildingList.Add(buildingInstance);
                         break;
                     }
                 }
